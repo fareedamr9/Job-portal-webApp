@@ -1,0 +1,49 @@
+<nav class="menu">
+  <ul>
+      <li><a (click)="goToProfile()">Profile</a></li>
+      <li><a >Home</a></li>
+     <li> <button (click)="logout()" >Logout</button></li>
+  </ul>
+</nav>
+<div class="bg">
+  <div class="logo"></div>
+    <div class="container">
+  
+  
+        <h1  class="title">Available jobs</h1>
+      <!-- <div class = "Alert" *ngIf="jobsList.length==0">
+        No Jobs posted :)
+      </div> -->
+      <!-- <section><form>
+        <input type="text" placeholder="Search for applicants" #filter>
+        <button class="primary" type="button" >Search</button>
+      </form></section> -->
+     <!-- search bar for applicants jobs-> applicants -->
+  
+      <!-- (click)="filterResults(filter.value)" -->
+      <!-- <app-job-details *ngFor="let job of filteredjobsList" [job]="job"></app-job-details> -->
+  
+  
+      <!-- <ul *ngIf="jobsList.length!=0"> -->
+  <ul>
+          <li   class="input" *ngFor="let job of jobsList  | async;index as i">
+  
+          <h3>{{job.jobTitle}}</h3>
+          <button class="btn btn-success del-btn" (click)="goToView(job)" >Applicants</button>
+          <button class="btn btn-danger del-btn" (click)="deleteJobs(job)" >Delete</button>
+          <button class="btn btn-success del-btn" (click)="goToPage(job)" >Edit</button>
+          
+
+          <h6>Company name : {{job.companyName}}</h6>
+          <h6>Location : {{job.location}}</h6>
+          <h6>Job description: {{job.description}}</h6>
+          <h6>Responsibilities : {{job.responsibilities}}</h6>
+          <h6>Benefits : {{job.benefits}}</h6>
+          <h6>Qualifications : {{job.qualifications}}</h6>
+          <h6>How to apply? : {{job.howToApply}}</h6>
+  
+          </li>
+    </ul>
+          <button class="btn btn-primary btn-sub" (click)="goToPost()">Add Job</button>
+        </div>
+      </div>

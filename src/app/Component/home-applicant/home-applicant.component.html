@@ -1,0 +1,86 @@
+<!-- <div class="container" *ngIf="(jobsList | async) as jobs">
+  <h1 class="title">Available jobs</h1>
+
+  <section>
+    <form>
+      <input type="text" placeholder="Search for Jobs" [(ngModel)]="search">
+    </form>
+  </section>
+
+  <div class="input" *ngFor="let job of jobs">
+    
+    <div *ngIf="!search || job.jobTitle.toLowerCase().includes(search.toLowerCase())">
+      <ul>
+        <li>
+          <h3>{{ job.jobTitle }}</h3>
+          <button class="btn btn-primary del-btn">Apply</button>
+          <h6>Company name: {{ job.companyName }}</h6>
+          <h6>Location: {{ job.location }}</h6>
+          <h6>Job description: {{ job.description }}</h6>
+          <h6>Responsibilities: {{ job.responsibilities }}</h6>
+          <h6>Benefits: {{ job.benefits }}</h6>
+          <h6>Qualifications: {{ job.qualifications }}</h6>
+          <h6>How to apply?: {{ job.howToApply }}</h6>
+        </li>
+      </ul>
+      <ul>
+        <ng-container *ngIf="job.jobTitle && job.jobTitle.length > 0">
+          <li *ngFor="let job of jobs">
+            {{job.jobTitle}}
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div> -->
+<nav class="menu">
+  <ul>
+      <li><a (click)="goToProfile()">Profile</a></li>
+      <li><a >Home</a></li>
+      <li><a (click)="goToSaved()">Saved</a></li>
+     <li> <button (click)="logout()" >Logout</button></li>
+  </ul>
+</nav>
+<div class="bg">
+  <div class="logo"></div>
+
+<h1 class="title" style="color: green;">Available Jobs</h1>
+<div class="container" *ngIf="(jobsList | async) as jobs">
+ <div *ngIf="(applicant | async) as a">
+  <input class="search-input" type="text" [(ngModel)]="search" placeholder="Search by job title">
+  
+  <ng-container *ngFor="let job of jobs">
+      <ng-container *ngIf="!search|| job.jobTitle.toString().toLowerCase().includes(search.toLowerCase())">
+          <!-- <ng-container *ngIf="job.jobID === jobId"> -->
+              <!-- <h2 class="title">Update Job {{ job.jobID }}</h2> -->
+              <!-- <p>title for Job : {{ job.jobTitle }}</p> -->
+              <ul>
+                <li>
+                  
+                  <h3>{{ job.jobTitle }}</h3>
+                  <button class="btn btn-primary del-btn" (click)="apply(job.id,a.name,a.resume,a.contact_email,a.phone)">Apply</button>
+                  <button class="btn btn-primary del-btn" (click)="save(job.jobTitle,job.id,job.companyName,job.location,job.description,job.responsibilities,job.benefits,job.qualifications,job.howToApply )">Save</button>
+                  <h6>Company name: {{ job.companyName }}</h6>
+                  <h6>Location: {{ job.location }}</h6>
+                  <h6>Job description: {{ job.description }}</h6>
+                  <h6>Responsibilities: {{ job.responsibilities }}</h6>
+                  <h6>Benefits: {{ job.benefits }}</h6>
+                  <h6>Qualifications: {{ job.qualifications }}</h6>
+                  <h6>How to apply?: {{ job.howToApply }}</h6>
+                </li>
+              </ul>
+             
+              <ul>
+                  <ng-container *ngIf="job.jobTitle && job.jobTitle.length > 0">
+                      <li *ngFor="let title of job.jobTitle">{{ title }}</li>
+                  </ng-container>
+                  <ng-container *ngIf="!job.jobTitle || job.jobTitle.length === 0">
+                      <li>No applicant IDs available for this job</li>
+                  </ng-container>
+              </ul>
+          <!-- </ng-container> -->
+      </ng-container>
+  </ng-container>
+</div>
+</div>
+</div>

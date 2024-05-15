@@ -1,0 +1,77 @@
+[debug] [2024-04-26T22:08:47.871Z] ----------------------------------------------------------------------
+[debug] [2024-04-26T22:08:47.873Z] Command:       D:\downloads\node.exe C:\Users\Farida\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-04-26T22:08:47.874Z] CLI Version:   13.7.5
+[debug] [2024-04-26T22:08:47.874Z] Platform:      win32
+[debug] [2024-04-26T22:08:47.874Z] Node Version:  v18.17.0
+[debug] [2024-04-26T22:08:47.875Z] Time:          Sat Apr 27 2024 01:08:47 GMT+0300 (Eastern European Summer Time)
+[debug] [2024-04-26T22:08:47.875Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-26T22:08:47.997Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-26T22:08:47.998Z] > authorizing via signed-in user (faridaallam2002@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Farida\job-portal-new
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-04-26T22:09:20.670Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-04-26T22:09:21.715Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-04-26T22:09:21.716Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project job-app-32055 (job-app) 
+[info] 
+=== Firestore Setup
+[debug] [2024-04-26T22:09:47.020Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/job-app-32055/services/firestore.googleapis.com [none]
+[debug] [2024-04-26T22:09:47.020Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/job-app-32055/services/firestore.googleapis.com x-goog-quota-user=projects/job-app-32055
+[debug] [2024-04-26T22:09:48.598Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/job-app-32055/services/firestore.googleapis.com 200
+[debug] [2024-04-26T22:09:48.598Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/job-app-32055/services/firestore.googleapis.com [omitted]
+[debug] [2024-04-26T22:09:48.600Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/job-app-32055/databases/(default) [none]
+[debug] [2024-04-26T22:09:49.928Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/job-app-32055/databases/(default) 200
+[debug] [2024-04-26T22:09:49.928Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/job-app-32055/databases/(default) {"name":"projects/job-app-32055/databases/(default)","uid":"c88af205-f845-4557-8721-174f3b69c502","createTime":"2024-04-25T13:04:16.860500Z","updateTime":"2024-04-25T13:04:16.860500Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-04-26T21:09:50.134333Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IOnj1czy4IUDMOnP3/y23YUD"}
+[debug] [2024-04-26T22:09:49.928Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-04-26T22:09:49.929Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-26T22:09:49.929Z] > authorizing via signed-in user (faridaallam2002@gmail.com)
+[debug] [2024-04-26T22:09:49.930Z] [iam] checking project job-app-32055 for permissions ["firebase.projects.get"]
+[debug] [2024-04-26T22:09:49.931Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/job-app-32055:testIamPermissions [none]
+[debug] [2024-04-26T22:09:49.931Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/job-app-32055:testIamPermissions x-goog-quota-user=projects/job-app-32055
+[debug] [2024-04-26T22:09:49.931Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/job-app-32055:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-04-26T22:09:51.372Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/job-app-32055:testIamPermissions 200
+[debug] [2024-04-26T22:09:51.373Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/job-app-32055:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-04-26T22:10:47.570Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/job-app-32055/releases pageSize=10&pageToken=
+[debug] [2024-04-26T22:10:48.806Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/job-app-32055/releases 200
+[debug] [2024-04-26T22:10:48.806Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/job-app-32055/releases {"releases":[{"name":"projects/job-app-32055/releases/cloud.firestore","rulesetName":"projects/job-app-32055/rulesets/0d4dcfc0-4e68-475b-ab75-6a708e38b921","createTime":"2024-04-25T13:04:21.300819Z","updateTime":"2024-04-25T13:04:21.300819Z"}]}
+[debug] [2024-04-26T22:10:48.807Z] Found ruleset: projects/job-app-32055/rulesets/0d4dcfc0-4e68-475b-ab75-6a708e38b921
+[debug] [2024-04-26T22:10:48.807Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/job-app-32055/rulesets/0d4dcfc0-4e68-475b-ab75-6a708e38b921 [none]
+[debug] [2024-04-26T22:10:51.274Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/job-app-32055/rulesets/0d4dcfc0-4e68-475b-ab75-6a708e38b921 200
+[debug] [2024-04-26T22:10:51.275Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/job-app-32055/rulesets/0d4dcfc0-4e68-475b-ab75-6a708e38b921 [omitted]
+[debug] [2024-04-26T22:10:51.279Z] Error: ENOENT: no such file or directory, open 'C:\Users\Farida\job-portal-new\		'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at Object.createFileSync (C:\Users\Farida\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:63:6)
+    at Config.writeProjectFile (C:\Users\Farida\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:154:12)
+    at C:\Users\Farida\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\rules.js:50:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (C:\Users\Farida\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\index.js:33:5)
+    at async init (C:\Users\Farida\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.

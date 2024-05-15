@@ -1,0 +1,30 @@
+<div class="bg">
+    <div class="logo"></div>
+    <div class="container" *ngIf="(myJob | async) as jobs">
+      <h1 class="title">Applicants for Job {{jobId}}</h1>
+      <input class="search-input" type="text" [(ngModel)]="searchApplicantId" placeholder="Search by Applicant Name">
+      
+      <ng-container *ngFor="let job of jobs">
+        <ng-container *ngIf="!searchApplicantId || job.appName.toString().includes(searchApplicantId)">
+          <ng-container *ngIf="job.jobID === jobId">
+            <ul>
+              <li>
+                <h3>{{ job.appName }}</h3>
+                <h6>Contact Email name: {{ job.contact }}</h6>
+                <h6>Resume: {{ job.resume }}</h6>
+                <h6>Phone Number: {{ job.phone }}</h6>
+              </li>
+            </ul>
+            <ul>
+              <ng-container *ngIf="job.appID && job.appID.length > 0">
+                <li *ngFor="let applicantId of job.appID" class="applicant-id">{{ applicantId }}</li>
+              </ng-container>
+              <ng-container *ngIf="!job.appID || job.appID.length === 0">
+                <li>No applicant IDs available for this job</li>
+              </ng-container>
+            </ul>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>

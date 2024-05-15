@@ -1,0 +1,90 @@
+.card-body {
+  background-color: transparent !important; /* Make the background fully transparent */
+  border: none; /* Remove border */
+}
+.logo {
+  background-image: url('logo-deign-1.png'); /* Set the background image */
+  background-size: contain; /* Adjust the background size */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  width: 250px; /* Adjust the width of the logo */
+  height: 150px; /* Adjust the height of the logo */
+  position: absolute; /* Position the logo absolutely */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+}
+.text-color{
+  color:green;
+}
+.slogan-container {
+  display: flex;
+  align-items: center;
+}
+
+.slogan {
+  font-size: 30px;
+  font-style: italic;
+  margin-left: 40px;
+  margin-right: 20px;
+  color: white ;
+  
+
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent !important; /* Ensure transparency */
+}
+.btn{
+  background-color:green;
+}
+
+
+.bg-img {
+  background-image: url("deign1.png");
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  max-width: 300px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bt {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

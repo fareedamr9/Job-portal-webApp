@@ -1,0 +1,42 @@
+<nav class="menu">
+    <ul>
+        <li><a (click)="goToProfile()">Profile</a></li>
+        <li><a (click)="goToHome()">Home</a></li>
+       <li> <button (click)="logout()" >Logout</button></li>
+    </ul>
+  </nav>
+<div class="bg">
+    <div class="logo"></div>
+    <h1 class="title">Post a new job</h1>
+    <div class="container">
+    
+    
+     <!-- <input #companyId class="input" type="text" placeholder="company ID" >
+    <br>     -->
+    <input #jobTitle class="input" type="text" placeholder="Job title">
+    <br>
+    <input #jobLoc class="input" type="text" placeholder="Job location">
+    <br>
+    
+    <input #ComName class="input" type="text" placeholder="Company name">
+    <br>
+    
+    <input #Qualifications class="input" type="text" placeholder="Qualifications">
+    <br>
+    
+    <input #Responsibilities class="input" type="text" placeholder="Reponsibilities">
+    <br>
+    
+    <input #Description class="input" type="text" placeholder="Job description">
+    <br>
+    
+    <input #Benefits class="input" type="text" placeholder="Job benefits">
+    <br>
+    
+    <input #HowToApply class="input" type="text" placeholder="How to apply">
+    <br>
+    <!-- <button class="btn btn-primary sub-btn" type="submit" (click)="postjob()">Submit</button> -->
+    <button class="btn btn-primary sub-btn" type="submit" (click)="saveJobs(jobTitle,jobLoc,ComName,Qualifications,Responsibilities,Description,Benefits,HowToApply)">Post</button>
+    </div>
+    </div>
+    

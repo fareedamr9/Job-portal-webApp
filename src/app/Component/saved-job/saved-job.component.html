@@ -1,0 +1,56 @@
+<!-- 
+
+<div class="container" *ngIf="(savedJobs | async) as jobs">
+    <input class="search-input" type="text" [(ngModel)]="searchJobId" placeholder="Search by job ID">
+    
+    <ng-container *ngFor="let job of jobs">
+        <ng-container *ngIf="!searchJobId || job.jobID.toString().includes(searchJobId)">
+            <ng-container *ngIf="job.appID === appId">
+                <h2 class="title">Update Job {{ job.jobID }}</h2>
+                <p class="job-info">Applicant ID for Job {{ job.jobID }}: {{ job.appID }}</p>
+                <ul>
+                    <ng-container *ngIf="job.jobID && job.jobID.length > 0">
+                        <li *ngFor="let applicantId of job.jobID" class="applicant-id">{{ applicantId }}</li>
+                    </ng-container>
+                    
+                </ul>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</div> -->
+<nav class="menu">
+    <ul>
+        <li><a (click)="goToProfile()">Profile</a></li>
+        <li><a (click)="goToHome()">Home</a></li>
+        <li><a >Saved</a></li>
+       <li> <button (click)="logout()" >Logout</button></li>
+    </ul>
+  </nav>
+<div class="bg">
+    <div class="logo"></div>
+    
+
+<div class="container">
+    <h1 class="title">Saved Jobs</h1>
+<div *ngFor="let job of savedJobs | async">
+    <div *ngIf="(apps | async) as a">
+    <ul>
+        <!-- <li style="font-size: larger;">Job ID: {{job.JobID}}</li> -->
+        <li>
+            <h3>{{ job.jobTitle }}</h3>
+            <button class="btn btn-primary del-btn" (click)="apply(job.JobID,a.name,a.resume,a.contact_email,a.phone)">Apply</button>         
+            <h6>Company name: {{ job.companyName }}</h6>
+            <h6>Location: {{ job.location }}</h6>
+            <h6>Job description: {{ job.description }}</h6>
+            <h6>Responsibilities: {{ job.responsibilities }}</h6>
+            <h6>Benefits: {{ job.benefits }}</h6>
+            <h6>Qualifications: {{ job.qualifications }}</h6>
+            <h6>How to apply?: {{ job.howToApply }}</h6>
+          </li>
+    </ul>
+    
+</div>
+</div>
+</div>
+</div>
+

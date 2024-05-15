@@ -1,0 +1,31 @@
+export class Saved {
+    JobID:string;
+    AppID:string;
+    companyName:string;
+    location:string;
+    description:string;
+    responsibilities:string;
+    benefits:string;
+    qualifications:string;
+    howToApply:string;
+    jobTitle:string;
+    constructor(jobTitle:string,jobID:string,appID:string,companyName:string,location:string,
+        description:string,
+        responsibilities:string,
+        benefits:string,
+        qualifications:string,
+        howToApply:string)
+    {
+        this.jobTitle=jobTitle;
+        this.AppID=appID;
+        this.JobID=jobID;
+        this.companyName=companyName;
+        this.benefits=benefits;
+        this.description=description;
+        this.howToApply=howToApply;
+        this.location=location;
+        this.responsibilities=responsibilities;
+        this.qualifications=qualifications;
+
+    }
+}

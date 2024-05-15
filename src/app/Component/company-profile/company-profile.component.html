@@ -1,0 +1,35 @@
+<nav class="menu">
+    <ul>
+        <li><a >Profile</a></li>
+        <li><a (click)="goToHome()">Home</a></li>
+       <li> <button (click)="logout()" >Logout</button></li>
+    </ul>
+  </nav>
+<div class="bg">
+    <div class="logo"></div>
+    <div class="container" *ngIf=" com | async as c ">
+      
+        <h2  class="title">Profile</h2>
+        <input #id readonly class="details" type="text" placeholder="id" [(ngModel)]="c.id" >
+        <input #role readonly class="details" type="text" placeholder="role" [(ngModel)]="c.role" >
+        <h4 class="input">Email:</h4>
+        <input #email readonly  class="details" type="text" placeholder="email" [(ngModel)]="c.email" >
+        <br>
+        <h4 class="input">Password:</h4>
+        <input readonly  #password class="details" type="text" placeholder="Password" [(ngModel)]="c.password">
+        <br>
+        <h4   class="input"> Company Name:</h4>
+        <input #ComName class="details" type="text" placeholder="Company name"[(ngModel)]="c.name" >
+        <br>
+        <h4 class="input">Company description:</h4>
+        <input #Comdesc class="details" type="text" placeholder="Company description" [(ngModel)]="c.description">
+        <br>
+        <h4 class="input"> Contact email:</h4>
+        <input #contactEmail class="details" type="text" placeholder="Contact email" [(ngModel)]="c.contact_email">
+        <br>
+        <h4 class="input">Logo:</h4>
+        <input #logo class="details" type="text" placeholder="Logo"[(ngModel)]="c.logo">
+    
+        <button class="btn btn-success save-btn"  (click)="Update(id,email,password,role,ComName,Comdesc,contactEmail,logo)">Update Profile</button>
+    </div>
+</div>

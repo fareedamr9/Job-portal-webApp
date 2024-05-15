@@ -1,0 +1,231 @@
+<!--  
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4" >
+      <div class="card shadow">
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Signup</h4>
+            </div>
+            
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="email">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputRole" class="form-label">Role</label>
+              <input type="role" class="form-control" name="role" [(ngModel)]="role">
+            </div>
+
+           
+
+           
+            
+            <button type="submit" class="btn btn-info" (click)="signup()">Signup</button>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="/login" style="text-decoration: none;">Already have an Account?<span class="text-danger">Login</span></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+       -->
+
+
+
+<body>
+  
+  <div class="bg-img">
+  <div class="container-fluid">
+    <div class="logo"></div>
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4" >
+      <div class="card shadow">
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Signup</h4>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputRole" class="form-label">Role</label>
+              <select class="form-control" name="role" [(ngModel)]="role">
+                <option value="applicant">Applicant</option>
+                <option value="company">Company</option>
+              </select>
+            </div>
+            <div *ngIf="role === 'applicant'">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="password">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Name:</label>
+                <input type="text" class="form-control" name="name" [(ngModel)]="name" />
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Contact Email address</label>
+              <input type="email" class="form-control" name="contact_email" [(ngModel)]="contact_email">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">phone number:</label>
+              <input type="tel" class="form-control" name="phone" [(ngModel)]="phone">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Upload Resume:</label>
+              <input type="file" class="form-control" name="resume" (change)="onFileChange($event)">
+            </div>
+            <div>
+              <label>Job Preferences:</label>
+              <select name="pref" multiple [(ngModel)]="job_pref">
+                  <option *ngFor="let preference of jobPreferences" [value]="preference">{{ preference }}</option>
+              </select>
+            </div>
+
+              <!-- Add additional fields for applicant here -->
+            </div>
+            <div *ngIf="role === 'company'">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="password">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Company Name:</label>
+                <input name="com_name" class="form-control" type="text" [(ngModel)]="com_name" />
+            </div>
+              <div class="mb-3">
+                <label  class="form-label">Company Email Address</label>
+                <input type="email" class="form-control" name="contact_email_com" [(ngModel)]="email_com">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Company Description</label>
+                <input type="text" class="form-control" name="desc" [(ngModel)]="description">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Logo URL</label>
+                <input type="url" class="form-control" name="logo" [(ngModel)]="logo">
+              </div>
+
+              <!-- Add additional fields for company here -->
+            </div>
+            <button type="submit" class="btn " style="float:right" (click)="signup()">Signup</button>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="/login" style="text-decoration: none; color: green;">Already have an Account?<span style="color: lightgreen;">Login</span></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+<!-- <div class="background-image">
+    <div class="auth-container">
+        <h2>Signup</h2>
+        <div>
+            <label>Role:</label>
+            <select #role [(ngModel)]="signupData.role" (change)="toggleInputs()">
+                <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+            </select>
+        </div>
+  
+        <div *ngIf="signupData.role.trim().toLowerCase() === 'applicant'">
+            <div>
+                <label>Email:</label>
+                <input type="email" [(ngModel)]="signupData.email" />
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" [(ngModel)]="signupData.password" />
+            </div>
+            <div>
+                <label>Name:</label>
+                <input type="text" [(ngModel)]="signupData.Name" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" [(ngModel)]="signupData.contact_email" />
+            </div>
+            <div>
+                <label>Phone:</label>
+                <input type="tel" [(ngModel)]="signupData.phone" />
+            </div>
+            <div>
+              <label>Upload Resume:</label>
+              <input type="file" (change)="onFileSelected($event)" />
+          </div>
+            <div>
+              <label>Job Preferences:</label>
+              <select multiple [(ngModel)]="signupData.jobPref">
+                  <option *ngFor="let preference of jobPreferences" [value]="preference">{{ preference }}</option>
+              </select>
+            </div>
+        </div>
+  
+        
+        <div *ngIf="signupData.role.trim().toLowerCase() === 'company'">
+          <div>
+            <label>Email:</label>
+            <input type="email" [(ngModel)]="signupData.email" />
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" [(ngModel)]="signupData.password" />
+        </div>
+          <div>
+            <label>Company name:</label>
+            <input type="email" [(ngModel)]="signupData.company_name" />
+        </div>
+        <div>
+            <label>Company description:</label>
+            <input type="password" [(ngModel)]="signupData.com_desc" />
+        </div>
+        <div>
+            <label>Logo:</label>
+            <input type="text" [(ngModel)]="signupData.logo" />
+        </div>
+        <div>
+            <label>Company email:</label>
+            <input type="text" [(ngModel)]="signupData.company_email" />
+        </div>
+  
+  
+        </div>
+  
+        <div class="bt">
+            <button (click)="signup()" routerLink="/">Signup</button>
+        </div>
+    </div>
+  </div> -->
+
+
+ 

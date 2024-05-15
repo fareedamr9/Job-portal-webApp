@@ -1,0 +1,73 @@
+<nav class="menu">
+  <ul>
+      <li><a >Profile</a></li>
+      <li><a (click)="goToHome()">Home</a></li>
+      <li><a (click)="goToSaved()">Saved</a></li>
+     <li> <button (click)="logout()" >Logout</button></li>
+  </ul>
+</nav>
+<div class="bg">
+  <div class="logo"></div>
+  <h2 class="title">Update profile </h2>
+    <div class="container" *ngIf="app | async as a" >
+        
+        <input #id hidden class="details" type="text" placeholder="id" [(ngModel)]=appId >
+        <input #role hidden class="details" type="text" placeholder="role" [(ngModel)]="a.role" >
+        <h4 class="input">Email:</h4>
+        <input #email  class="details" type="text" placeholder="email" [(ngModel)]="a.email" >
+        <br>
+        <h4 class="input">Password:</h4>
+       <input  #password class="details" type="text" placeholder="Password" [(ngModel)]="a.password">
+       <br>
+       <h4 class="input">Name:</h4>
+       <input #name class="details" type="text" placeholder="Name"[(ngModel)]="a.name" >
+       <br>
+       <h4 class="input">Phone number:</h4>
+        <input #phone class="details" type="tel" placeholder="Phone Number"[(ngModel)]="a.phone" >
+        <br>
+       <h4 class="input">Contact Email:</h4>
+        <input #contact class="details" type="text" placeholder="contact_email"[(ngModel)]="a.contact_email" >
+        <br>
+      
+          <h4  class="input">Resume:</h4>
+          <input #resume type="file" class="details" name="resume" (change)="onFileChange($event)">
+      <br>
+          <h4 class="input">Job Preferences:</h4>
+          <select #pref class="details" name="pref" multiple [(ngModel)]="a.job_preferences">
+              <option *ngFor="let preference of jobPreferences" [value]="preference">{{ preference }}</option>
+          </select>
+          <!-- router link to home -->
+          <button class="btn btn-danger del-btn" (click)="goToPage()" >Cancel</button> 
+          <button class="btn btn-success del-btn"(click)="Update(id,email,password,role,name,contact,pref,phone)" >Update</button>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+      <!-- <button class="btn btn-success save-btn"  (click)="Update(id,email,password,role)">Update Profile</button> -->
+ 
+
+      
+        <!-- <h4 class="input"> Name: </h4>
+        <input class="details" type="text" placeholder="Name" >
+        <br>
+        <h4 class="input">Email:</h4>
+        <input class="details" type="text" placeholder="Email" >
+        <br>
+        <div>
+            <label>Upload Resume:</label>
+            <input class="input" type="file"  />
+        </div>
+          <div>
+            <label>Job Preferences:</label>
+            <select multiple class="input">
+                <option *ngFor="let preference of jobPreferences" [value]="preference">{{ preference }}</option>
+            </select>
+          </div>
+        <button class="btn btn-danger del-btn" routerLink=''>Cancel</button>
+        <button class="btn btn-success del-btn" >Update</button> -->

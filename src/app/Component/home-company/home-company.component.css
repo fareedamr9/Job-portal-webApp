@@ -1,0 +1,189 @@
+
+  .h3{
+
+    color: green;
+  }
+  .logo {
+    background-image: url('logo-deign-1.png'); /* Set the background image */
+    background-size: contain; /* Adjust the background size */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    width: 250px; /* Adjust the width of the logo */
+    height: 150px; /* Adjust the height of the logo */
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+  }
+  .bg{
+    background-image: url("deign1.png");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+  }
+  .container {
+    position: relative;
+    max-width: 1000px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .title{
+    text-align: center;
+    font-family: 'Montserrat';
+    color: green;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.search-input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Round the corners */
+  background-color: #f2f2f2; /* Light gray background */
+  outline: none; /* Remove outline when focused */
+  transition: all 0.3s ease; /* Smooth transition for hover and focus */
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+
+.search-input::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+  .btn-sub{
+    width:120px;
+    height:45px;
+
+display: block;
+margin: auto;
+    /* margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+  }
+  
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+
+}
+
+  .input{
+    font-family:'Montserrat';
+    font-size: larger;
+    margin-bottom: 80px;
+  }
+
+.del-btn{
+    float: inline-end;
+    margin-left: 10px;
+    width: 105px;
+    
+
+}
+.btn-sub:hover,
+.del-btn:hover{
+  background-color: lightgreen;
+}
+.menu {
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.menu ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  background-color: #555;
+}
+.menu ul li a.router-link-active {
+  font-weight: bold;
+}
+
+
+.menu ul li button {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border-style: none;
+}
+
+.menu ul li button:hover {
+  background-color: #555;
+}
+.menu ul li button.router-link-active {
+  font-weight: bold;
+}
+
+/* .inputs{
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(800px, 800px));
+  margin-top: 50px;
+  justify-content: space-around;
+} */
+
+button {
+  padding: 10px;
+  width:80px;
+  border: solid 1px var(--primary-color);
+  /* background: var(--primary-color); */
+  background:green;
+  color: white;
+  border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }   
+}
+
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }    
+}
+
+

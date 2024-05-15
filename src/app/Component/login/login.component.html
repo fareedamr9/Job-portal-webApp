@@ -1,0 +1,46 @@
+<body>
+  <div class="bg-img">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="slogan-container">
+            <p class="slogan">Spark Your Career Journey with Job Spark, Where Opportunities Ignite!</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="logo"></div>
+          <div class="card shadow">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <h4 class="text-dark text-muted">Login</h4>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputRole" class="form-label">Role</label>
+                  <select class="form-control" name="role" [(ngModel)]="role">
+                    <option value="applicant">Applicant</option>
+                    <option value="company">Company</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                </div>
+                <button type="submit" class="btn " style="float: right;" (click)="login()">Login</button>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="/signup" style="text-decoration: none; color: green;">Need Account?<span style="color: lightgreen;">Signup</span></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

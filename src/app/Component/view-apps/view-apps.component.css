@@ -1,0 +1,66 @@
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Round the corners */
+  background-color: #f2f2f2; /* Light gray background */
+  outline: none; /* Remove outline when focused */
+  transition: all 0.3s ease; /* Smooth transition for hover and focus */
+  width: 70%; /* Increase the width */
+  margin-bottom: 20px; /* Add some space below the input */
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+
+.search-input::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.container {
+  margin: 50px auto;
+  width: 100%; /* Center the container horizontally */
+}
+
+.title {
+  text-align: center;
+  font-family: 'Montserrat';
+  color: green;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  background-image: url('logo-deign-1.png'); /* Set the background image */
+  background-size: contain; /* Adjust the background size */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  width: 250px; /* Adjust the width of the logo */
+  height: 150px; /* Adjust the height of the logo */
+  position: absolute; /* Position the logo absolutely */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  margin-bottom: 50px; 
+}
+
+.bg {
+  background-image: url("deign1.png");
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Additional styles for .container */
+.container {
+  position: relative;
+  max-width: 1000px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

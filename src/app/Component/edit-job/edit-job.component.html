@@ -1,0 +1,46 @@
+<div class="bg">
+<div class="logo"></div>
+
+<h2  class="title">Update Job {{jobId}}</h2>
+    <div class="container" *ngIf="myJob | async as job">
+
+        
+    
+        <input #id hidden class="details" type="text" placeholder="id" [(ngModel)]="job.id" >
+        
+        <!-- <h4 class="input"> Company ID:</h4> -->
+        <input #companyId hidden class="details" type="text" placeholder="Company Id" [(ngModel)]="job.companyId">
+        <br>
+        <h4 class="input"> Company Name:</h4>
+        <input #ComName readonly class="details" type="text" placeholder="Company name" [(ngModel)]="job.companyName">
+        <br>
+        <h4 class="input"> Job Title:</h4>
+        <input #jobTitle class="details" type="text" placeholder="job title" [(ngModel)]="job.jobTitle">
+        <br>
+    
+        <h4 class="input">Job Description:</h4>
+        <textarea #Description class="details"placeholder="Job Description" [(ngModel)]="job.description"></textarea>
+    
+        <h4 class="input"> Job Location:</h4>
+        <input #jobLoc class="details" type="text" placeholder="Location" [(ngModel)]="job.location">
+    
+        <h4 class="input"> Responsibilities:</h4>
+        <input #Responsibilities class="details" type="text" placeholder="Responsibilities" [(ngModel)]="job.responsibilities">
+    
+    
+        <h4 class="input"> Benefits:</h4>
+        <input #Benefits class="details" type="text" placeholder="Benifits" [(ngModel)]="job.benefits">
+    
+    
+        <h4 class="input">Qualifications:</h4>
+        <input #Qualifications class="details" type="text" placeholder="Qualifications" [(ngModel)]="job.qualifications">
+    
+        <h4 class="input">How to apply?</h4>
+        <input #HowToApply class="details" type="text" placeholder="How to Apply?" [(ngModel)]="job.howToApply">
+    
+        <button class="btn btn-danger del-btn" (click)="goToPage(job.companyId)">Cancel</button>
+        <button class="btn btn-success del-btn" (click)="Update(id,companyId,jobTitle,jobLoc,ComName,Qualifications,Responsibilities,Description,Benefits,HowToApply)">Update</button>
+    
+    </div>
+    
+    </div>
